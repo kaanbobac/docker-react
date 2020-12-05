@@ -1,0 +1,6 @@
+FROM node:latest
+RUN mkdir /var/www
+WORKDIR /var/www
+RUN npm install
+COPY ./ ./ 
+CMD ["npm","run","start"]
