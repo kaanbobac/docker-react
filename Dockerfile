@@ -1,9 +1,9 @@
 FROM node:latest
-RUN mkdir /var/www
-WORKDIR /var/www
+RUN mkdir '/var/www'
+WORKDIR '/var/www'
 COPY package.json ./
 RUN npm install
-COPY . ./
+COPY ./ ./
 RUN npm run build
 
 FROM nginx
