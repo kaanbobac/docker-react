@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t bobac_image -f Dockerfile.dev .
 script:
-  - docker run bobac_image npm run test -- --coverage
+  - docker run -e CI=true bobac_image npm run test -- --coverage
